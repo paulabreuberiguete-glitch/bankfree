@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BankFree | Pagos (Demo)</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark">BF</span>
+        <span class="brand__text"><strong>BankFree</strong><small>Pagos (Demo)</small></span>
+      </a>
+      <nav class="nav" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <a class="btn btn--ghost" href="dashboard.html">Resumen</a>
+        <a class="btn btn--ghost" href="transferencias.html">Transferencias</a>
+        <a class="btn btn--ghost" href="prestamos.html">Préstamos</a>
+        <button class="btn btn--primary" id="logoutBtn" type="button">Salir</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width:860px;">
+      <div class="card">
+        <h1>Pago de servicios</h1>
+        <p class="muted">Registra un pago demo con comprobante y movimiento.</p>
+
+        <form id="payForm" style="display:grid; gap:10px; margin-top:12px;">
+          <label class="muted">Servicio
+            <input id="service" class="input" required placeholder="Ej: Energía, Agua, Internet" />
+          </label>
+          <label class="muted">Contrato / Referencia
+            <input id="contract" class="input" required placeholder="Ej: 001-458923" />
+          </label>
+          <label class="muted">Monto (RD$)
+            <input id="payAmount" class="input" required inputmode="decimal" placeholder="Ej: 950" />
+          </label>
+
+          <button class="btn btn--primary" type="submit">Pagar (demo)</button>
+        </form>
+
+        <div id="payReceipt"></div>
+      </div>
+
+      <small class="muted">© 2026–2030 BankFree</small>
+    </div>
+  </main>
+
+  <script src="../assets/js/bankfree-demo.js"></script>
+</body>
+</html>

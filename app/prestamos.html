@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BankFree | Préstamos (Demo)</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark">BF</span>
+        <span class="brand__text"><strong>BankFree</strong><small>Préstamos (Demo)</small></span>
+      </a>
+      <nav class="nav" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <a class="btn btn--ghost" href="dashboard.html">Resumen</a>
+        <a class="btn btn--ghost" href="transferencias.html">Transferencias</a>
+        <a class="btn btn--ghost" href="pagos.html">Pagos</a>
+        <button class="btn btn--primary" id="logoutBtn" type="button">Salir</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width:860px;">
+      <div class="card">
+        <h1>Simulador de préstamos</h1>
+        <p class="muted">Cálculo aproximado para fines educativos (no es oferta real).</p>
+
+        <form id="loanForm" style="display:grid; gap:10px; margin-top:12px;">
+          <label class="muted">Monto (RD$)
+            <input id="loanAmount" class="input" required inputmode="decimal" placeholder="Ej: 100000" />
+          </label>
+          <label class="muted">Plazo (meses)
+            <input id="loanMonths" class="input" required inputmode="numeric" placeholder="Ej: 24" />
+          </label>
+          <label class="muted">Tasa anual (%)
+            <input id="loanRate" class="input" required inputmode="decimal" placeholder="Ej: 18" />
+          </label>
+
+          <button class="btn btn--primary" type="submit">Calcular</button>
+        </form>
+
+        <div id="loanOut"></div>
+      </div>
+
+      <small class="muted">© 2026–2030 BankFree</small>
+    </div>
+  </main>
+
+  <script src="../assets/js/bankfree-demo.js"></script>
+</body>
+</html>

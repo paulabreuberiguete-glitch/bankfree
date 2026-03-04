@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BankFree | Transferencias (Demo)</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark">BF</span>
+        <span class="brand__text"><strong>BankFree</strong><small>Transferencias (Demo)</small></span>
+      </a>
+      <nav class="nav" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <a class="btn btn--ghost" href="dashboard.html">Resumen</a>
+        <a class="btn btn--ghost" href="pagos.html">Pagos</a>
+        <a class="btn btn--ghost" href="prestamos.html">Préstamos</a>
+        <button class="btn btn--primary" id="logoutBtn" type="button">Salir</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width:860px;">
+      <div class="card">
+        <h1>Transferencias</h1>
+        <p class="muted">Genera un comprobante demo y registra el movimiento.</p>
+
+        <form id="transferForm" style="display:grid; gap:10px; margin-top:12px;">
+          <label class="muted">Beneficiario
+            <input id="toName" class="input" required placeholder="Nombre del beneficiario" />
+          </label>
+          <label class="muted">Banco destino
+            <input id="toBank" class="input" required placeholder="Ej: Banco X" />
+          </label>
+          <label class="muted">Monto (RD$)
+            <input id="amount" class="input" required inputmode="decimal" placeholder="Ej: 1500" />
+          </label>
+          <label class="muted">Concepto
+            <input id="concept" class="input" placeholder="Ej: Renta" />
+          </label>
+
+          <button class="btn btn--primary" type="submit">Realizar transferencia (demo)</button>
+        </form>
+
+        <div id="transferReceipt"></div>
+      </div>
+
+      <small class="muted">© 2026–2030 BankFree</small>
+    </div>
+  </main>
+
+  <script src="../assets/js/bankfree-demo.js"></script>
+</body>
+</html>
